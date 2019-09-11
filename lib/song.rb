@@ -49,6 +49,7 @@ class Song
     song_artist = filename.split(".")[0]
     array = song_artist.split("-")
     self.find_or_create_by_name(array[1])
+    @name = array[1]
     @artist_name = array[0]
   end
   
