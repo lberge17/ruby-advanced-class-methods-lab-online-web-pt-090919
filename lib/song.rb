@@ -50,20 +50,12 @@ class Song
     song.name = (filename.split(" - ")[1].chomp(".mp3"))
     song.artist_name = (filename.split(" - ")[0])
     song
-    
-    
-#    song_artist = filename.split(".")[0]
-#    song = self.new
-#    song.name = song_artist.split(" - ")[1]
-#    song.artist_name = song_artist.split(" - ")[0]
-    
-    #array = song_artist.split(" - ")
-    #self.new_by_name(array[1])
-    #@artist_name = array[0]
   end
   
   def self.create_from_filename(filename)
-    
+    self.new_from_filename(filename)
+    self.save
+    self
   end
   
   def self.destroy_all
